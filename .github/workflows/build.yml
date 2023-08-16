@@ -36,7 +36,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: kkdz-lcov-file
-          path: coverage/lcov.xml
+          path: target/site/jacoco-aggregate/jacoco.xml
       - name: Build
         run: mvn -B verify
 

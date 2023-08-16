@@ -31,7 +31,7 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
       - name: code coverage
-        run: mvn test
+        run: mvn verify
       - name: 🔊 Upload code coverage to GitHub Artifacts (for SonarCloud)
         uses: actions/upload-artifact@v2
         with:
